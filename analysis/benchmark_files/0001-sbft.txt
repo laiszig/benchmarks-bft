@@ -1,0 +1,1945 @@
+== Benchmark Parameters: request-interval (initial)=100.00us, block-size=10, nodes=0, f=1
+-- Report #1 @ t=3.00s --
+-- Node 2
+block-execute   	avg: 53.09ms, max: 95.15ms, count: 55
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: false
+last-executed-sequence	num: 54
+message-process 	avg: -63.89ms, max: 0, count: 113
+proposal (since-start)	count: 0
+request-queue   	avg: 1.31s, max: 2.63s
+slow-path       	ratio: 0.00
+
+-- Node 3
+block-execute   	avg: 52.74ms, max: 96.54ms, count: 55
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: false
+last-executed-sequence	num: 54
+message-process 	avg: -81.34ms, max: 15.94ms, count: 113
+proposal (since-start)	count: 0
+request-queue   	avg: 1.29s, max: 2.62s
+slow-path       	ratio: 0.00
+
+-- Node 0
+block-execute   	avg: 48.95ms, max: 121.81ms, count: 55
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: false
+last-executed-sequence	num: 55
+message-process 	avg: 43.38ms, max: 459.82ms, count: 1716
+proposal (since-start)	count: 57
+request-queue   	avg: 1.38s, max: 2.72s
+slow-path       	ratio: 0.00
+
+-- Client 4
+current-episode 	value: 0
+current-protocol	value: sbft
+last-executed-sequence	num: 54
+request-execute 	avg: 1.52s, max: 2.81s, count: 550
+request-interval	100.00us
+slow-path       	ratio: 0.00
+throughput      	183.33req/s
+
+-- Node 1
+block-execute   	avg: 50.46ms, max: 95.43ms, count: 55
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: false
+last-executed-sequence	num: 54
+message-process 	avg: -386.86ms, max: 0, count: 113
+proposal (since-start)	count: 0
+request-queue   	avg: 992.59ms, max: 2.31s
+slow-path       	ratio: 0.00
+
+-- Report #2 @ t=6.00s --
+-- Node 0
+block-execute   	avg: 35.21ms, max: 52.85ms, count: 60
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: false
+last-executed-sequence	num: 115
+message-process 	avg: -6.29ms, max: 462.72ms, count: 779
+proposal (since-start)	count: 116
+request-queue   	avg: 4.09s, max: 4.87s
+slow-path       	ratio: 0.00
+
+-- Node 1
+block-execute   	avg: 48.94ms, max: 96.74ms, count: 60
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: false
+last-executed-sequence	num: 114
+message-process 	avg: -390.97ms, max: 0, count: 120
+proposal (since-start)	count: 0
+request-queue   	avg: 3.69s, max: 4.48s
+slow-path       	ratio: 0.00
+
+-- Node 2
+block-execute   	avg: 49.39ms, max: 94.94ms, count: 60
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: false
+last-executed-sequence	num: 114
+message-process 	avg: -68.00ms, max: 0, count: 120
+proposal (since-start)	count: 0
+request-queue   	avg: 4.01s, max: 4.80s
+slow-path       	ratio: 0.00
+
+-- Node 3
+block-execute   	avg: 49.29ms, max: 95.10ms, count: 60
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: false
+last-executed-sequence	num: 114
+message-process 	avg: -80.84ms, max: 0, count: 120
+proposal (since-start)	count: 0
+request-queue   	avg: 4.00s, max: 4.79s
+slow-path       	ratio: 0.00
+
+-- Client 4
+current-episode 	value: 0
+current-protocol	value: sbft
+last-executed-sequence	num: 114
+request-execute 	avg: 4.21s, max: 5.04s, count: 600
+request-interval	100.00us
+slow-path       	ratio: 0.00
+throughput      	200.00req/s
+
+-- Report #3 @ t=9.00s --
+-- Node 2
+block-execute   	avg: 49.05ms, max: 90.36ms, count: 60
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: false
+last-executed-sequence	num: 174
+message-process 	avg: -69.02ms, max: 0, count: 120
+proposal (since-start)	count: 0
+request-queue   	avg: 4.76s, max: 4.82s
+slow-path       	ratio: 0.00
+
+-- Client 4
+current-episode 	value: 0
+current-protocol	value: sbft
+last-executed-sequence	num: 174
+request-execute 	avg: 5.00s, max: 5.09s, count: 600
+request-interval	100.00us
+slow-path       	ratio: 0.00
+throughput      	200.00req/s
+
+-- Node 0
+block-execute   	avg: 34.13ms, max: 52.86ms, count: 60
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: false
+last-executed-sequence	num: 174
+message-process 	avg: -7.04ms, max: 459.12ms, count: 773
+proposal (since-start)	count: 176
+request-queue   	avg: 4.84s, max: 4.91s
+slow-path       	ratio: 0.00
+
+-- Node 3
+block-execute   	avg: 48.91ms, max: 91.25ms, count: 60
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: false
+last-executed-sequence	num: 174
+message-process 	avg: -81.67ms, max: 0, count: 120
+proposal (since-start)	count: 0
+request-queue   	avg: 4.75s, max: 4.80s
+slow-path       	ratio: 0.00
+
+-- Node 1
+block-execute   	avg: 49.20ms, max: 91.98ms, count: 60
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: false
+last-executed-sequence	num: 174
+message-process 	avg: -390.92ms, max: 0, count: 120
+proposal (since-start)	count: 0
+request-queue   	avg: 4.44s, max: 4.49s
+slow-path       	ratio: 0.00
+
+-- Report #4 @ t=12.00s --
+-- Node 0
+block-execute   	avg: 33.80ms, max: 53.12ms, count: 60
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: false
+last-executed-sequence	num: 234
+message-process 	avg: -7.28ms, max: 459.18ms, count: 777
+proposal (since-start)	count: 236
+request-queue   	avg: 4.85s, max: 4.91s
+slow-path       	ratio: 0.00
+
+-- Client 4
+current-episode 	value: 0
+current-protocol	value: sbft
+last-executed-sequence	num: 233
+request-execute 	avg: 5.01s, max: 5.06s, count: 590
+request-interval	100.00us
+slow-path       	ratio: 0.00
+throughput      	196.67req/s
+
+-- Node 2
+block-execute   	avg: 48.82ms, max: 98.51ms, count: 59
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: false
+last-executed-sequence	num: 233
+message-process 	avg: -69.52ms, max: 0, count: 118
+proposal (since-start)	count: 0
+request-queue   	avg: 4.77s, max: 4.86s
+slow-path       	ratio: 0.00
+
+-- Node 3
+block-execute   	avg: 48.83ms, max: 95.29ms, count: 59
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: false
+last-executed-sequence	num: 233
+message-process 	avg: -82.26ms, max: 0, count: 118
+proposal (since-start)	count: 0
+request-queue   	avg: 4.76s, max: 4.85s
+slow-path       	ratio: 0.00
+
+-- Node 1
+block-execute   	avg: 48.80ms, max: 97.31ms, count: 59
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: false
+last-executed-sequence	num: 233
+message-process 	avg: -391.72ms, max: 0, count: 118
+proposal (since-start)	count: 0
+request-queue   	avg: 4.45s, max: 4.54s
+slow-path       	ratio: 0.00
+
+-- Report #5 @ t=15.00s --
+-- Node 0
+block-execute   	avg: 34.71ms, max: 98.98ms, count: 61
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: false
+last-executed-sequence	num: 295
+message-process 	avg: -6.44ms, max: 459.34ms, count: 785
+proposal (since-start)	count: 296
+request-queue   	avg: 4.85s, max: 4.91s
+slow-path       	ratio: 0.00
+
+-- Node 2
+block-execute   	avg: 49.50ms, max: 141.26ms, count: 61
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: false
+last-executed-sequence	num: 294
+message-process 	avg: -69.64ms, max: 0, count: 122
+proposal (since-start)	count: 0
+request-queue   	avg: 4.77s, max: 4.86s
+slow-path       	ratio: 0.00
+
+-- Client 4
+current-episode 	value: 0
+current-protocol	value: sbft
+last-executed-sequence	num: 294
+request-execute 	avg: 5.01s, max: 5.15s, count: 610
+request-interval	100.00us
+slow-path       	ratio: 0.00
+throughput      	203.33req/s
+
+-- Node 1
+block-execute   	avg: 50.43ms, max: 101.64ms, count: 61
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: false
+last-executed-sequence	num: 294
+message-process 	avg: -391.55ms, max: 0, count: 122
+proposal (since-start)	count: 0
+request-queue   	avg: 4.45s, max: 4.55s
+slow-path       	ratio: 0.00
+
+-- Node 3
+block-execute   	avg: 50.44ms, max: 103.36ms, count: 61
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: false
+last-executed-sequence	num: 294
+message-process 	avg: -81.84ms, max: 0, count: 122
+proposal (since-start)	count: 0
+request-queue   	avg: 4.76s, max: 4.86s
+slow-path       	ratio: 0.00
+
+-- Report #6 @ t=18.00s --
+-- Node 0
+block-execute   	avg: 34.09ms, max: 56.87ms, count: 58
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: false
+last-executed-sequence	num: 353
+message-process 	avg: -6.96ms, max: 468.99ms, count: 772
+proposal (since-start)	count: 356
+request-queue   	avg: 4.86s, max: 4.92s
+slow-path       	ratio: 0.00
+
+-- Node 1
+block-execute   	avg: 49.45ms, max: 97.96ms, count: 59
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: false
+last-executed-sequence	num: 353
+message-process 	avg: -391.67ms, max: 0, count: 118
+proposal (since-start)	count: 0
+request-queue   	avg: 4.46s, max: 4.54s
+slow-path       	ratio: 0.00
+
+-- Node 2
+block-execute   	avg: 49.41ms, max: 99.40ms, count: 59
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: false
+last-executed-sequence	num: 353
+message-process 	avg: -69.28ms, max: 0, count: 118
+proposal (since-start)	count: 0
+request-queue   	avg: 4.78s, max: 4.87s
+slow-path       	ratio: 0.00
+
+-- Node 3
+block-execute   	avg: 49.37ms, max: 100.71ms, count: 59
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: false
+last-executed-sequence	num: 353
+message-process 	avg: -81.94ms, max: 0, count: 118
+proposal (since-start)	count: 0
+request-queue   	avg: 4.77s, max: 4.86s
+slow-path       	ratio: 0.00
+
+-- Client 4
+current-episode 	value: 0
+current-protocol	value: sbft
+last-executed-sequence	num: 353
+request-execute 	avg: 5.02s, max: 5.07s, count: 590
+request-interval	100.00us
+slow-path       	ratio: 0.00
+throughput      	196.67req/s
+
+-- Report #7 @ t=21.00s --
+-- Node 0
+block-execute   	avg: 148.48ms, max: 253.72ms, count: 57
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 410
+message-process 	avg: -19.01ms, max: 458.82ms, count: 785
+proposal (since-start)	count: 415
+request-queue   	avg: 4.85s, max: 4.88s
+slow-path       	ratio: 0.63
+
+-- Node 2
+block-execute   	avg: 156.34ms, max: 259.73ms, count: 57
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 410
+message-process 	avg: -70.83ms, max: 0, count: 153
+proposal (since-start)	count: 0
+request-queue   	avg: 4.78s, max: 4.83s
+slow-path       	ratio: 0.00
+
+-- Node 1
+block-execute   	avg: 46.88ms, max: 90.89ms, count: 20
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 373
+message-process 	avg: -393.20ms, max: 0, count: 40
+proposal (since-start)	count: 0
+request-queue   	avg: 4.45s, max: 4.51s
+slow-path       	ratio: 0.00
+
+-- Client 4
+current-episode 	value: 0
+current-protocol	value: sbft
+last-executed-sequence	num: 410
+request-execute 	avg: 5.12s, max: 5.27s, count: 570
+request-interval	100.00us
+slow-path       	ratio: 0.00
+throughput      	190.00req/s
+
+-- Node 3
+block-execute   	avg: 157.76ms, max: 288.25ms, count: 57
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 410
+message-process 	avg: -84.38ms, max: 0, count: 153
+proposal (since-start)	count: 0
+request-queue   	avg: 4.76s, max: 4.82s
+slow-path       	ratio: 0.00
+
+-- Report #8 @ t=24.00s --
+-- Node 0
+block-execute   	avg: 212.66ms, max: 253.38ms, count: 60
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 470
+message-process 	avg: -24.65ms, max: 149.22ms, count: 828
+proposal (since-start)	count: 475
+request-queue   	avg: 4.85s, max: 4.90s
+slow-path       	ratio: 1.00
+
+-- Node 1
+block-execute   	avg: 0, max: 0, count: 0
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 373
+message-process 	avg: 0, max: 0, count: 0
+proposal (since-start)	count: 0
+request-queue   	avg: 0, max: 0
+slow-path       	ratio: NaN
+
+-- Client 4
+current-episode 	value: 0
+current-protocol	value: sbft
+last-executed-sequence	num: 469
+request-execute 	avg: 5.18s, max: 5.25s, count: 590
+request-interval	100.00us
+slow-path       	ratio: 0.00
+throughput      	196.67req/s
+
+-- Node 2
+block-execute   	avg: 217.80ms, max: 289.20ms, count: 59
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 469
+message-process 	avg: -73.61ms, max: 0, count: 178
+proposal (since-start)	count: 0
+request-queue   	avg: 4.77s, max: 4.82s
+slow-path       	ratio: 0.00
+
+-- Node 3
+block-execute   	avg: 216.40ms, max: 292.71ms, count: 59
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 469
+message-process 	avg: -85.89ms, max: 0, count: 178
+proposal (since-start)	count: 0
+request-queue   	avg: 4.76s, max: 4.81s
+slow-path       	ratio: 0.00
+
+-- Report #9 @ t=27.00s --
+-- Node 1
+block-execute   	avg: 0, max: 0, count: 0
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 373
+message-process 	avg: 0, max: 0, count: 0
+proposal (since-start)	count: 0
+request-queue   	avg: 0, max: 0
+slow-path       	ratio: NaN
+
+-- Node 0
+block-execute   	avg: 212.54ms, max: 252.95ms, count: 60
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 530
+message-process 	avg: -27.39ms, max: 149.62ms, count: 830
+proposal (since-start)	count: 535
+request-queue   	avg: 4.67s, max: 4.71s
+slow-path       	ratio: 1.00
+
+-- Node 2
+block-execute   	avg: 218.58ms, max: 294.92ms, count: 59
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 528
+message-process 	avg: -71.21ms, max: 0, count: 179
+proposal (since-start)	count: 0
+request-queue   	avg: 4.59s, max: 4.77s
+slow-path       	ratio: 0.00
+
+-- Node 3
+block-execute   	avg: 219.94ms, max: 285.86ms, count: 59
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 528
+message-process 	avg: -86.09ms, max: 0, count: 179
+proposal (since-start)	count: 0
+request-queue   	avg: 4.58s, max: 4.76s
+slow-path       	ratio: 0.00
+
+-- Client 4
+current-episode 	value: 0
+current-protocol	value: sbft
+last-executed-sequence	num: 528
+request-execute 	avg: 5.01s, max: 5.21s, count: 590
+request-interval	100.00us
+slow-path       	ratio: 0.00
+throughput      	196.67req/s
+
+-- Report #10 @ t=30.00s --
+-- Node 0
+block-execute   	avg: 203.25ms, max: 251.96ms, count: 60
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 590
+message-process 	avg: -27.46ms, max: 148.02ms, count: 861
+proposal (since-start)	count: 595
+request-queue   	avg: 4.69s, max: 4.76s
+slow-path       	ratio: 1.00
+
+-- Node 1
+block-execute   	avg: 0, max: 0, count: 0
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 373
+message-process 	avg: 0, max: 0, count: 0
+proposal (since-start)	count: 0
+request-queue   	avg: 0, max: 0
+slow-path       	ratio: NaN
+
+-- Node 2
+block-execute   	avg: 211.88ms, max: 279.62ms, count: 61
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 589
+message-process 	avg: -75.74ms, max: 0, count: 182
+proposal (since-start)	count: 0
+request-queue   	avg: 4.61s, max: 4.71s
+slow-path       	ratio: 0.00
+
+-- Node 3
+block-execute   	avg: 210.87ms, max: 255.23ms, count: 62
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 590
+message-process 	avg: -87.86ms, max: 0, count: 184
+proposal (since-start)	count: 0
+request-queue   	avg: 4.60s, max: 4.69s
+slow-path       	ratio: 0.00
+
+-- Client 4
+current-episode 	value: 0
+current-protocol	value: sbft
+last-executed-sequence	num: 590
+request-execute 	avg: 5.01s, max: 5.14s, count: 620
+request-interval	100.00us
+slow-path       	ratio: 0.00
+throughput      	206.67req/s
+
+-- Report #11 @ t=33.00s --
+-- Node 0
+block-execute   	avg: 201.45ms, max: 253.94ms, count: 59
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 650
+message-process 	avg: -27.55ms, max: 149.56ms, count: 827
+proposal (since-start)	count: 655
+request-queue   	avg: 4.69s, max: 4.76s
+slow-path       	ratio: 1.00
+
+-- Node 1
+block-execute   	avg: 0, max: 0, count: 0
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 373
+message-process 	avg: 0, max: 0, count: 0
+proposal (since-start)	count: 0
+request-queue   	avg: 0, max: 0
+slow-path       	ratio: NaN
+
+-- Node 3
+block-execute   	avg: 207.99ms, max: 253.05ms, count: 59
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 650
+message-process 	avg: -88.75ms, max: 0, count: 178
+proposal (since-start)	count: 0
+request-queue   	avg: 4.59s, max: 4.66s
+slow-path       	ratio: 0.00
+
+-- Node 2
+block-execute   	avg: 206.60ms, max: 255.08ms, count: 60
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 650
+message-process 	avg: -75.40ms, max: 0, count: 180
+proposal (since-start)	count: 0
+request-queue   	avg: 4.61s, max: 4.67s
+slow-path       	ratio: 0.00
+
+-- Client 4
+current-episode 	value: 0
+current-protocol	value: sbft
+last-executed-sequence	num: 650
+request-execute 	avg: 5.00s, max: 5.10s, count: 590
+request-interval	100.00us
+slow-path       	ratio: 0.00
+throughput      	196.67req/s
+
+-- Report #12 @ t=36.00s --
+-- Node 0
+block-execute   	avg: 207.90ms, max: 252.74ms, count: 60
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 709
+message-process 	avg: -27.97ms, max: 149.74ms, count: 837
+proposal (since-start)	count: 715
+request-queue   	avg: 4.70s, max: 4.72s
+slow-path       	ratio: 1.00
+
+-- Node 1
+block-execute   	avg: 0, max: 0, count: 0
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 373
+message-process 	avg: 0, max: 0, count: 0
+proposal (since-start)	count: 0
+request-queue   	avg: 0, max: 0
+slow-path       	ratio: NaN
+
+-- Node 2
+block-execute   	avg: 212.56ms, max: 255.79ms, count: 60
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 709
+message-process 	avg: -72.92ms, max: 0, count: 179
+proposal (since-start)	count: 0
+request-queue   	avg: 4.62s, max: 4.67s
+slow-path       	ratio: 0.00
+
+-- Client 4
+current-episode 	value: 0
+current-protocol	value: sbft
+last-executed-sequence	num: 709
+request-execute 	avg: 5.02s, max: 5.11s, count: 600
+request-interval	100.00us
+slow-path       	ratio: 0.00
+throughput      	200.00req/s
+
+-- Node 3
+block-execute   	avg: 214.10ms, max: 283.21ms, count: 60
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 709
+message-process 	avg: -86.67ms, max: 0, count: 179
+proposal (since-start)	count: 0
+request-queue   	avg: 4.60s, max: 4.66s
+slow-path       	ratio: 0.00
+
+-- Report #13 @ t=39.00s --
+-- Node 0
+block-execute   	avg: 202.25ms, max: 254.65ms, count: 60
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 769
+message-process 	avg: -26.69ms, max: 149.87ms, count: 822
+proposal (since-start)	count: 774
+request-queue   	avg: 4.69s, max: 4.72s
+slow-path       	ratio: 1.00
+
+-- Node 1
+block-execute   	avg: 0, max: 0, count: 0
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 373
+message-process 	avg: 0, max: 0, count: 0
+proposal (since-start)	count: 0
+request-queue   	avg: 0, max: 0
+slow-path       	ratio: NaN
+
+-- Node 2
+block-execute   	avg: 211.18ms, max: 291.66ms, count: 59
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 768
+message-process 	avg: -75.43ms, max: 0, count: 179
+proposal (since-start)	count: 0
+request-queue   	avg: 4.61s, max: 4.67s
+slow-path       	ratio: 0.00
+
+-- Client 4
+current-episode 	value: 0
+current-protocol	value: sbft
+last-executed-sequence	num: 767
+request-execute 	avg: 5.01s, max: 5.10s, count: 580
+request-interval	100.00us
+slow-path       	ratio: 0.00
+throughput      	193.33req/s
+
+-- Node 3
+block-execute   	avg: 210.25ms, max: 252.35ms, count: 58
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 767
+message-process 	avg: -88.74ms, max: 0, count: 177
+proposal (since-start)	count: 0
+request-queue   	avg: 4.60s, max: 4.65s
+slow-path       	ratio: 0.00
+
+-- Report #14 @ t=42.00s --
+-- Node 0
+block-execute   	avg: 213.54ms, max: 262.55ms, count: 60
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 829
+message-process 	avg: -32.35ms, max: 149.95ms, count: 859
+proposal (since-start)	count: 834
+request-queue   	avg: 4.70s, max: 4.77s
+slow-path       	ratio: 1.00
+
+-- Node 1
+block-execute   	avg: 0, max: 0, count: 0
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 373
+message-process 	avg: 0, max: 0, count: 0
+proposal (since-start)	count: 0
+request-queue   	avg: 0, max: 0
+slow-path       	ratio: NaN
+
+-- Node 2
+block-execute   	avg: 218.37ms, max: 290.11ms, count: 61
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 829
+message-process 	avg: -73.68ms, max: 0, count: 181
+proposal (since-start)	count: 0
+request-queue   	avg: 4.62s, max: 4.71s
+slow-path       	ratio: 0.00
+
+-- Client 4
+current-episode 	value: 0
+current-protocol	value: sbft
+last-executed-sequence	num: 829
+request-execute 	avg: 5.03s, max: 5.15s, count: 620
+request-interval	100.00us
+slow-path       	ratio: 0.00
+throughput      	206.67req/s
+
+-- Node 3
+block-execute   	avg: 218.52ms, max: 283.67ms, count: 62
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 829
+message-process 	avg: -86.23ms, max: 0, count: 183
+proposal (since-start)	count: 0
+request-queue   	avg: 4.61s, max: 4.70s
+slow-path       	ratio: 0.00
+
+-- Report #15 @ t=45.00s --
+-- Node 0
+block-execute   	avg: 203.77ms, max: 253.07ms, count: 59
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 888
+message-process 	avg: -25.89ms, max: 149.47ms, count: 818
+proposal (since-start)	count: 894
+request-queue   	avg: 4.68s, max: 4.73s
+slow-path       	ratio: 1.00
+
+-- Node 1
+block-execute   	avg: 0, max: 0, count: 0
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 373
+message-process 	avg: 0, max: 0, count: 0
+proposal (since-start)	count: 0
+request-queue   	avg: 0, max: 0
+slow-path       	ratio: NaN
+
+-- Client 4
+current-episode 	value: 0
+current-protocol	value: sbft
+last-executed-sequence	num: 887
+request-execute 	avg: 5.00s, max: 5.12s, count: 580
+request-interval	100.00us
+slow-path       	ratio: 0.00
+throughput      	193.33req/s
+
+-- Node 2
+block-execute   	avg: 208.47ms, max: 275.73ms, count: 58
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 887
+message-process 	avg: -77.25ms, max: 0, count: 176
+proposal (since-start)	count: 0
+request-queue   	avg: 4.60s, max: 4.67s
+slow-path       	ratio: 0.00
+
+-- Node 3
+block-execute   	avg: 209.27ms, max: 287.52ms, count: 58
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 887
+message-process 	avg: -88.59ms, max: 0, count: 176
+proposal (since-start)	count: 0
+request-queue   	avg: 4.59s, max: 4.65s
+slow-path       	ratio: 0.00
+
+-- Report #16 @ t=48.00s --
+-- Node 0
+block-execute   	avg: 207.07ms, max: 252.75ms, count: 60
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 950
+message-process 	avg: -27.88ms, max: 148.48ms, count: 849
+proposal (since-start)	count: 954
+request-queue   	avg: 4.69s, max: 4.72s
+slow-path       	ratio: 1.00
+
+-- Node 1
+block-execute   	avg: 0, max: 0, count: 0
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 373
+message-process 	avg: 0, max: 0, count: 0
+proposal (since-start)	count: 0
+request-queue   	avg: 0, max: 0
+slow-path       	ratio: NaN
+
+-- Node 2
+block-execute   	avg: 212.00ms, max: 285.79ms, count: 61
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 949
+message-process 	avg: -75.39ms, max: 0, count: 181
+proposal (since-start)	count: 0
+request-queue   	avg: 4.61s, max: 4.66s
+slow-path       	ratio: 0.00
+
+-- Client 4
+current-episode 	value: 0
+current-protocol	value: sbft
+last-executed-sequence	num: 949
+request-execute 	avg: 5.01s, max: 5.10s, count: 610
+request-interval	100.00us
+slow-path       	ratio: 0.00
+throughput      	203.33req/s
+
+-- Node 3
+block-execute   	avg: 211.98ms, max: 259.90ms, count: 61
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 949
+message-process 	avg: -87.36ms, max: 0, count: 181
+proposal (since-start)	count: 0
+request-queue   	avg: 4.60s, max: 4.66s
+slow-path       	ratio: 0.00
+
+-- Report #17 @ t=51.00s --
+-- Node 0
+block-execute   	avg: 202.71ms, max: 253.26ms, count: 60
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 1008
+message-process 	avg: -29.70ms, max: 153.30ms, count: 830
+proposal (since-start)	count: 1013
+request-queue   	avg: 4.69s, max: 4.72s
+slow-path       	ratio: 1.00
+
+-- Node 1
+block-execute   	avg: 0, max: 0, count: 0
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 373
+message-process 	avg: 0, max: 0, count: 0
+proposal (since-start)	count: 0
+request-queue   	avg: 0, max: 0
+slow-path       	ratio: NaN
+
+-- Node 2
+block-execute   	avg: 208.31ms, max: 290.99ms, count: 60
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 1008
+message-process 	avg: -76.21ms, max: 0, count: 180
+proposal (since-start)	count: 0
+request-queue   	avg: 4.61s, max: 4.66s
+slow-path       	ratio: 0.00
+
+-- Client 4
+current-episode 	value: 0
+current-protocol	value: sbft
+last-executed-sequence	num: 1008
+request-execute 	avg: 5.01s, max: 5.09s, count: 600
+request-interval	100.00us
+slow-path       	ratio: 0.00
+throughput      	200.00req/s
+
+-- Node 3
+block-execute   	avg: 208.02ms, max: 252.40ms, count: 60
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 1008
+message-process 	avg: -87.92ms, max: 0, count: 181
+proposal (since-start)	count: 0
+request-queue   	avg: 4.60s, max: 4.65s
+slow-path       	ratio: 0.00
+
+-- Report #18 @ t=54.00s --
+-- Node 0
+block-execute   	avg: 210.12ms, max: 253.68ms, count: 60
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 1068
+message-process 	avg: -27.17ms, max: 148.85ms, count: 833
+proposal (since-start)	count: 1073
+request-queue   	avg: 4.69s, max: 4.72s
+slow-path       	ratio: 1.00
+
+-- Node 1
+block-execute   	avg: 0, max: 0, count: 0
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 373
+message-process 	avg: 0, max: 0, count: 0
+proposal (since-start)	count: 0
+request-queue   	avg: 0, max: 0
+slow-path       	ratio: NaN
+
+-- Node 2
+block-execute   	avg: 213.84ms, max: 296.17ms, count: 59
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 1067
+message-process 	avg: -75.28ms, max: 0, count: 179
+proposal (since-start)	count: 0
+request-queue   	avg: 4.61s, max: 4.67s
+slow-path       	ratio: 0.00
+
+-- Node 3
+block-execute   	avg: 216.64ms, max: 287.90ms, count: 59
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 1067
+message-process 	avg: -86.27ms, max: 0, count: 178
+proposal (since-start)	count: 0
+request-queue   	avg: 4.60s, max: 4.66s
+slow-path       	ratio: 0.00
+
+-- Client 4
+current-episode 	value: 0
+current-protocol	value: sbft
+last-executed-sequence	num: 1067
+request-execute 	avg: 5.02s, max: 5.10s, count: 590
+request-interval	100.00us
+slow-path       	ratio: 0.00
+throughput      	196.67req/s
+
+-- Report #19 @ t=57.00s --
+-- Node 0
+block-execute   	avg: 210.05ms, max: 253.52ms, count: 60
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 1128
+message-process 	avg: -29.00ms, max: 148.69ms, count: 846
+proposal (since-start)	count: 1133
+request-queue   	avg: 4.69s, max: 4.72s
+slow-path       	ratio: 1.00
+
+-- Node 1
+block-execute   	avg: 0, max: 0, count: 0
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 373
+message-process 	avg: 0, max: 0, count: 0
+proposal (since-start)	count: 0
+request-queue   	avg: 0, max: 0
+slow-path       	ratio: NaN
+
+-- Node 2
+block-execute   	avg: 215.71ms, max: 291.75ms, count: 60
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 1127
+message-process 	avg: -74.37ms, max: 0, count: 179
+proposal (since-start)	count: 0
+request-queue   	avg: 4.60s, max: 4.67s
+slow-path       	ratio: 0.00
+
+-- Client 4
+current-episode 	value: 0
+current-protocol	value: sbft
+last-executed-sequence	num: 1127
+request-execute 	avg: 5.01s, max: 5.10s, count: 600
+request-interval	100.00us
+slow-path       	ratio: 0.00
+throughput      	200.00req/s
+
+-- Node 3
+block-execute   	avg: 216.52ms, max: 296.09ms, count: 60
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 1127
+message-process 	avg: -88.54ms, max: 0, count: 179
+proposal (since-start)	count: 0
+request-queue   	avg: 4.59s, max: 4.66s
+slow-path       	ratio: 0.00
+
+-- Report #20 @ t=60.00s --
+-- Node 1
+block-execute   	avg: 0, max: 0, count: 0
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 373
+message-process 	avg: 0, max: 0, count: 0
+proposal (since-start)	count: 0
+request-queue   	avg: 0, max: 0
+slow-path       	ratio: NaN
+
+-- Node 2
+block-execute   	avg: 213.98ms, max: 256.68ms, count: 61
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 1188
+message-process 	avg: -72.94ms, max: 0, count: 183
+proposal (since-start)	count: 0
+request-queue   	avg: 4.60s, max: 4.67s
+slow-path       	ratio: 0.00
+
+-- Node 3
+block-execute   	avg: 215.00ms, max: 291.76ms, count: 61
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 1188
+message-process 	avg: -86.81ms, max: 0, count: 183
+proposal (since-start)	count: 0
+request-queue   	avg: 4.59s, max: 4.66s
+slow-path       	ratio: 0.00
+
+-- Client 4
+current-episode 	value: 0
+current-protocol	value: sbft
+last-executed-sequence	num: 1188
+request-execute 	avg: 5.00s, max: 5.10s, count: 610
+request-interval	100.00us
+slow-path       	ratio: 0.00
+throughput      	203.33req/s
+
+-- Node 0
+block-execute   	avg: 208.49ms, max: 257.22ms, count: 60
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 1188
+message-process 	avg: -27.71ms, max: 151.84ms, count: 852
+proposal (since-start)	count: 1193
+request-queue   	avg: 4.68s, max: 4.72s
+slow-path       	ratio: 1.00
+
+-- Report #21 @ t=63.00s --
+-- Node 0
+block-execute   	avg: 200.33ms, max: 253.34ms, count: 60
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 1248
+message-process 	avg: -26.61ms, max: 152.01ms, count: 835
+proposal (since-start)	count: 1253
+request-queue   	avg: 4.68s, max: 4.72s
+slow-path       	ratio: 1.00
+
+-- Node 1
+block-execute   	avg: 0, max: 0, count: 0
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 373
+message-process 	avg: 0, max: 0, count: 0
+proposal (since-start)	count: 0
+request-queue   	avg: 0, max: 0
+slow-path       	ratio: NaN
+
+-- Node 2
+block-execute   	avg: 206.06ms, max: 280.02ms, count: 60
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 1248
+message-process 	avg: -76.40ms, max: 0, count: 179
+proposal (since-start)	count: 0
+request-queue   	avg: 4.60s, max: 4.66s
+slow-path       	ratio: 0.00
+
+-- Client 4
+current-episode 	value: 0
+current-protocol	value: sbft
+last-executed-sequence	num: 1248
+request-execute 	avg: 4.99s, max: 5.06s, count: 600
+request-interval	100.00us
+slow-path       	ratio: 0.00
+throughput      	200.00req/s
+
+-- Node 3
+block-execute   	avg: 205.38ms, max: 280.79ms, count: 60
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 1248
+message-process 	avg: -89.28ms, max: 0, count: 179
+proposal (since-start)	count: 0
+request-queue   	avg: 4.59s, max: 4.65s
+slow-path       	ratio: 0.00
+
+-- Report #22 @ t=66.00s --
+-- Node 0
+block-execute   	avg: 207.76ms, max: 253.02ms, count: 59
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 1308
+message-process 	avg: -26.99ms, max: 149.99ms, count: 826
+proposal (since-start)	count: 1313
+request-queue   	avg: 4.70s, max: 4.76s
+slow-path       	ratio: 1.00
+
+-- Node 1
+block-execute   	avg: 0, max: 0, count: 0
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 373
+message-process 	avg: 0, max: 0, count: 0
+proposal (since-start)	count: 0
+request-queue   	avg: 0, max: 0
+slow-path       	ratio: NaN
+
+-- Client 4
+current-episode 	value: 0
+current-protocol	value: sbft
+last-executed-sequence	num: 1308
+request-execute 	avg: 5.02s, max: 5.10s, count: 590
+request-interval	100.00us
+slow-path       	ratio: 0.00
+throughput      	196.67req/s
+
+-- Node 3
+block-execute   	avg: 214.13ms, max: 281.12ms, count: 59
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 1308
+message-process 	avg: -88.81ms, max: 0, count: 178
+proposal (since-start)	count: 0
+request-queue   	avg: 4.60s, max: 4.65s
+slow-path       	ratio: 0.00
+
+-- Node 2
+block-execute   	avg: 213.78ms, max: 284.28ms, count: 59
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 1308
+message-process 	avg: -75.19ms, max: 0, count: 178
+proposal (since-start)	count: 0
+request-queue   	avg: 4.62s, max: 4.67s
+slow-path       	ratio: 0.00
+
+-- Report #23 @ t=69.00s --
+-- Node 0
+block-execute   	avg: 202.04ms, max: 251.69ms, count: 60
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 1367
+message-process 	avg: -29.24ms, max: 149.03ms, count: 839
+proposal (since-start)	count: 1372
+request-queue   	avg: 4.69s, max: 4.72s
+slow-path       	ratio: 1.00
+
+-- Node 1
+block-execute   	avg: 0, max: 0, count: 0
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 373
+message-process 	avg: 0, max: 0, count: 0
+proposal (since-start)	count: 0
+request-queue   	avg: 0, max: 0
+slow-path       	ratio: NaN
+
+-- Node 2
+block-execute   	avg: 209.54ms, max: 291.52ms, count: 60
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 1367
+message-process 	avg: -75.91ms, max: 0, count: 179
+proposal (since-start)	count: 0
+request-queue   	avg: 4.61s, max: 4.67s
+slow-path       	ratio: 0.00
+
+-- Client 4
+current-episode 	value: 0
+current-protocol	value: sbft
+last-executed-sequence	num: 1367
+request-execute 	avg: 5.01s, max: 5.10s, count: 600
+request-interval	100.00us
+slow-path       	ratio: 0.00
+throughput      	200.00req/s
+
+-- Node 3
+block-execute   	avg: 209.01ms, max: 260.10ms, count: 60
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 1367
+message-process 	avg: -88.19ms, max: 0, count: 179
+proposal (since-start)	count: 0
+request-queue   	avg: 4.60s, max: 4.66s
+slow-path       	ratio: 0.00
+
+-- Report #24 @ t=72.00s --
+-- Node 0
+block-execute   	avg: 200.93ms, max: 252.51ms, count: 60
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 1427
+message-process 	avg: -27.90ms, max: 149.45ms, count: 841
+proposal (since-start)	count: 1432
+request-queue   	avg: 4.68s, max: 4.71s
+slow-path       	ratio: 1.00
+
+-- Node 1
+block-execute   	avg: 0, max: 0, count: 0
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 373
+message-process 	avg: 0, max: 0, count: 0
+proposal (since-start)	count: 0
+request-queue   	avg: 0, max: 0
+slow-path       	ratio: NaN
+
+-- Node 2
+block-execute   	avg: 205.87ms, max: 255.83ms, count: 60
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 1427
+message-process 	avg: -74.91ms, max: 0, count: 180
+proposal (since-start)	count: 0
+request-queue   	avg: 4.60s, max: 4.66s
+slow-path       	ratio: 0.00
+
+-- Client 4
+current-episode 	value: 0
+current-protocol	value: sbft
+last-executed-sequence	num: 1427
+request-execute 	avg: 4.99s, max: 5.09s, count: 600
+request-interval	100.00us
+slow-path       	ratio: 0.00
+throughput      	200.00req/s
+
+-- Node 3
+block-execute   	avg: 207.76ms, max: 255.49ms, count: 60
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 1427
+message-process 	avg: -88.54ms, max: 0, count: 180
+proposal (since-start)	count: 0
+request-queue   	avg: 4.58s, max: 4.65s
+slow-path       	ratio: 0.00
+
+-- Report #25 @ t=75.00s --
+-- Node 0
+block-execute   	avg: 201.50ms, max: 252.49ms, count: 60
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 1487
+message-process 	avg: -28.26ms, max: 149.04ms, count: 839
+proposal (since-start)	count: 1492
+request-queue   	avg: 4.70s, max: 4.75s
+slow-path       	ratio: 1.00
+
+-- Node 1
+block-execute   	avg: 0, max: 0, count: 0
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 373
+message-process 	avg: 0, max: 0, count: 0
+proposal (since-start)	count: 0
+request-queue   	avg: 0, max: 0
+slow-path       	ratio: NaN
+
+-- Node 3
+block-execute   	avg: 208.42ms, max: 252.72ms, count: 60
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 1487
+message-process 	avg: -86.80ms, max: 0, count: 180
+proposal (since-start)	count: 0
+request-queue   	avg: 4.61s, max: 4.69s
+slow-path       	ratio: 0.00
+
+-- Client 4
+current-episode 	value: 0
+current-protocol	value: sbft
+last-executed-sequence	num: 1487
+request-execute 	avg: 5.02s, max: 5.10s, count: 600
+request-interval	100.00us
+slow-path       	ratio: 0.00
+throughput      	200.00req/s
+
+-- Node 2
+block-execute   	avg: 209.62ms, max: 286.50ms, count: 60
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 1487
+message-process 	avg: -74.89ms, max: 0, count: 180
+proposal (since-start)	count: 0
+request-queue   	avg: 4.62s, max: 4.70s
+slow-path       	ratio: 0.00
+
+-- Report #26 @ t=78.00s --
+-- Node 0
+block-execute   	avg: 212.44ms, max: 260.26ms, count: 59
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 1546
+message-process 	avg: -27.19ms, max: 161.84ms, count: 835
+proposal (since-start)	count: 1552
+request-queue   	avg: 4.69s, max: 4.72s
+slow-path       	ratio: 1.00
+
+-- Node 1
+block-execute   	avg: 0, max: 0, count: 0
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 373
+message-process 	avg: 0, max: 0, count: 0
+proposal (since-start)	count: 0
+request-queue   	avg: 0, max: 0
+slow-path       	ratio: NaN
+
+-- Node 2
+block-execute   	avg: 219.38ms, max: 283.85ms, count: 59
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 1546
+message-process 	avg: -75.46ms, max: 0, count: 180
+proposal (since-start)	count: 0
+request-queue   	avg: 4.61s, max: 4.67s
+slow-path       	ratio: 0.00
+
+-- Node 3
+block-execute   	avg: 221.15ms, max: 295.96ms, count: 59
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 1546
+message-process 	avg: -87.79ms, max: 0, count: 180
+proposal (since-start)	count: 0
+request-queue   	avg: 4.59s, max: 4.66s
+slow-path       	ratio: 0.00
+
+-- Client 4
+current-episode 	value: 0
+current-protocol	value: sbft
+last-executed-sequence	num: 1546
+request-execute 	avg: 5.02s, max: 5.11s, count: 590
+request-interval	100.00us
+slow-path       	ratio: 0.00
+throughput      	196.67req/s
+
+-- Report #27 @ t=81.00s --
+-- Node 0
+block-execute   	avg: 201.57ms, max: 253.01ms, count: 61
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 1607
+message-process 	avg: -24.06ms, max: 149.22ms, count: 845
+proposal (since-start)	count: 1612
+request-queue   	avg: 4.68s, max: 4.76s
+slow-path       	ratio: 1.00
+
+-- Node 1
+block-execute   	avg: 0, max: 0, count: 0
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 373
+message-process 	avg: 0, max: 0, count: 0
+proposal (since-start)	count: 0
+request-queue   	avg: 0, max: 0
+slow-path       	ratio: NaN
+
+-- Node 2
+block-execute   	avg: 207.76ms, max: 252.20ms, count: 61
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 1607
+message-process 	avg: -75.43ms, max: 0, count: 180
+proposal (since-start)	count: 0
+request-queue   	avg: 4.60s, max: 4.67s
+slow-path       	ratio: 0.00
+
+-- Client 4
+current-episode 	value: 0
+current-protocol	value: sbft
+last-executed-sequence	num: 1607
+request-execute 	avg: 5.00s, max: 5.10s, count: 610
+request-interval	100.00us
+slow-path       	ratio: 0.00
+throughput      	203.33req/s
+
+-- Node 3
+block-execute   	avg: 208.58ms, max: 255.70ms, count: 61
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 1607
+message-process 	avg: -87.54ms, max: 0, count: 180
+proposal (since-start)	count: 0
+request-queue   	avg: 4.59s, max: 4.65s
+slow-path       	ratio: 0.00
+
+-- Report #28 @ t=84.00s --
+-- Node 0
+block-execute   	avg: 202.10ms, max: 249.77ms, count: 60
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 1667
+message-process 	avg: -24.13ms, max: 149.67ms, count: 834
+proposal (since-start)	count: 1672
+request-queue   	avg: 4.68s, max: 4.75s
+slow-path       	ratio: 1.00
+
+-- Node 1
+block-execute   	avg: 0, max: 0, count: 0
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 373
+message-process 	avg: 0, max: 0, count: 0
+proposal (since-start)	count: 0
+request-queue   	avg: 0, max: 0
+slow-path       	ratio: NaN
+
+-- Node 2
+block-execute   	avg: 204.87ms, max: 250.74ms, count: 59
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 1666
+message-process 	avg: -77.28ms, max: 0, count: 178
+proposal (since-start)	count: 0
+request-queue   	avg: 4.60s, max: 4.70s
+slow-path       	ratio: 0.00
+
+-- Client 4
+current-episode 	value: 0
+current-protocol	value: sbft
+last-executed-sequence	num: 1666
+request-execute 	avg: 4.99s, max: 5.10s, count: 590
+request-interval	100.00us
+slow-path       	ratio: 0.00
+throughput      	196.67req/s
+
+-- Node 3
+block-execute   	avg: 206.17ms, max: 251.82ms, count: 59
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 1666
+message-process 	avg: -91.57ms, max: 0, count: 178
+proposal (since-start)	count: 0
+request-queue   	avg: 4.59s, max: 4.69s
+slow-path       	ratio: 0.00
+
+-- Report #29 @ t=87.00s --
+-- Node 0
+block-execute   	avg: 209.53ms, max: 251.87ms, count: 59
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 1727
+message-process 	avg: -25.93ms, max: 156.05ms, count: 832
+proposal (since-start)	count: 1732
+request-queue   	avg: 4.70s, max: 4.76s
+slow-path       	ratio: 1.00
+
+-- Node 1
+block-execute   	avg: 0, max: 0, count: 0
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 373
+message-process 	avg: 0, max: 0, count: 0
+proposal (since-start)	count: 0
+request-queue   	avg: 0, max: 0
+slow-path       	ratio: NaN
+
+-- Node 3
+block-execute   	avg: 211.51ms, max: 284.80ms, count: 60
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 1727
+message-process 	avg: -90.80ms, max: 0, count: 179
+proposal (since-start)	count: 0
+request-queue   	avg: 4.60s, max: 4.66s
+slow-path       	ratio: 0.00
+
+-- Node 2
+block-execute   	avg: 209.61ms, max: 285.02ms, count: 60
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 1727
+message-process 	avg: -76.87ms, max: 0, count: 179
+proposal (since-start)	count: 0
+request-queue   	avg: 4.62s, max: 4.67s
+slow-path       	ratio: 0.00
+
+-- Client 4
+current-episode 	value: 0
+current-protocol	value: sbft
+last-executed-sequence	num: 1727
+request-execute 	avg: 5.02s, max: 5.11s, count: 600
+request-interval	100.00us
+slow-path       	ratio: 0.00
+throughput      	200.00req/s
+
+-- Report #30 @ t=90.00s --
+-- Node 0
+block-execute   	avg: 191.47ms, max: 255.72ms, count: 60
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 1786
+message-process 	avg: -25.47ms, max: 149.15ms, count: 834
+proposal (since-start)	count: 1791
+request-queue   	avg: 4.70s, max: 4.72s
+slow-path       	ratio: 1.00
+
+-- Node 1
+block-execute   	avg: 0, max: 0, count: 0
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 373
+message-process 	avg: 0, max: 0, count: 0
+proposal (since-start)	count: 0
+request-queue   	avg: 0, max: 0
+slow-path       	ratio: NaN
+
+-- Node 2
+block-execute   	avg: 201.80ms, max: 254.00ms, count: 59
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 1785
+message-process 	avg: -77.69ms, max: 0, count: 178
+proposal (since-start)	count: 0
+request-queue   	avg: 4.62s, max: 4.67s
+slow-path       	ratio: 0.00
+
+-- Node 3
+block-execute   	avg: 202.56ms, max: 256.35ms, count: 59
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 1785
+message-process 	avg: -90.40ms, max: 0, count: 178
+proposal (since-start)	count: 0
+request-queue   	avg: 4.60s, max: 4.65s
+slow-path       	ratio: 0.00
+
+-- Client 4
+current-episode 	value: 0
+current-protocol	value: sbft
+last-executed-sequence	num: 1785
+request-execute 	avg: 5.01s, max: 5.06s, count: 590
+request-interval	100.00us
+slow-path       	ratio: 0.00
+throughput      	196.67req/s
+
+-- Report #31 @ t=93.00s --
+-- Node 0
+block-execute   	avg: 201.10ms, max: 251.35ms, count: 60
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 1846
+message-process 	avg: -26.59ms, max: 150.33ms, count: 846
+proposal (since-start)	count: 1851
+request-queue   	avg: 4.69s, max: 4.72s
+slow-path       	ratio: 1.00
+
+-- Node 1
+block-execute   	avg: 0, max: 0, count: 0
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 373
+message-process 	avg: 0, max: 0, count: 0
+proposal (since-start)	count: 0
+request-queue   	avg: 0, max: 0
+slow-path       	ratio: NaN
+
+-- Node 2
+block-execute   	avg: 205.57ms, max: 249.12ms, count: 61
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 1846
+message-process 	avg: -77.47ms, max: 0, count: 183
+proposal (since-start)	count: 0
+request-queue   	avg: 4.61s, max: 4.67s
+slow-path       	ratio: 0.00
+
+-- Client 4
+current-episode 	value: 0
+current-protocol	value: sbft
+last-executed-sequence	num: 1846
+request-execute 	avg: 5.00s, max: 5.07s, count: 610
+request-interval	100.00us
+slow-path       	ratio: 0.00
+throughput      	203.33req/s
+
+-- Node 3
+block-execute   	avg: 206.36ms, max: 252.25ms, count: 61
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 1846
+message-process 	avg: -91.19ms, max: 0, count: 183
+proposal (since-start)	count: 0
+request-queue   	avg: 4.60s, max: 4.66s
+slow-path       	ratio: 0.00
+
+-- Report #32 @ t=96.00s --
+-- Node 0
+block-execute   	avg: 206.24ms, max: 252.74ms, count: 60
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 1906
+message-process 	avg: -26.75ms, max: 149.25ms, count: 841
+proposal (since-start)	count: 1911
+request-queue   	avg: 4.70s, max: 4.76s
+slow-path       	ratio: 1.00
+
+-- Node 1
+block-execute   	avg: 0, max: 0, count: 0
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 373
+message-process 	avg: 0, max: 0, count: 0
+proposal (since-start)	count: 0
+request-queue   	avg: 0, max: 0
+slow-path       	ratio: NaN
+
+-- Client 4
+current-episode 	value: 0
+current-protocol	value: sbft
+last-executed-sequence	num: 1906
+request-execute 	avg: 5.02s, max: 5.11s, count: 600
+request-interval	100.00us
+slow-path       	ratio: 0.00
+throughput      	200.00req/s
+
+-- Node 2
+block-execute   	avg: 209.73ms, max: 256.21ms, count: 60
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 1906
+message-process 	avg: -77.35ms, max: 0, count: 179
+proposal (since-start)	count: 0
+request-queue   	avg: 4.62s, max: 4.67s
+slow-path       	ratio: 0.00
+
+-- Node 3
+block-execute   	avg: 210.00ms, max: 288.14ms, count: 60
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 1906
+message-process 	avg: -89.83ms, max: 0, count: 179
+proposal (since-start)	count: 0
+request-queue   	avg: 4.61s, max: 4.66s
+slow-path       	ratio: 0.00
+
+-- Report #33 @ t=99.00s --
+-- Node 0
+block-execute   	avg: 212.54ms, max: 253.11ms, count: 60
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 1966
+message-process 	avg: -27.21ms, max: 154.33ms, count: 835
+proposal (since-start)	count: 1971
+request-queue   	avg: 4.69s, max: 4.72s
+slow-path       	ratio: 1.00
+
+-- Node 2
+block-execute   	avg: 215.90ms, max: 289.50ms, count: 60
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 1966
+message-process 	avg: -76.98ms, max: 0, count: 180
+proposal (since-start)	count: 0
+request-queue   	avg: 4.61s, max: 4.67s
+slow-path       	ratio: 0.00
+
+-- Node 1
+block-execute   	avg: 0, max: 0, count: 0
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 373
+message-process 	avg: 0, max: 0, count: 0
+proposal (since-start)	count: 0
+request-queue   	avg: 0, max: 0
+slow-path       	ratio: NaN
+
+-- Node 3
+block-execute   	avg: 216.12ms, max: 292.36ms, count: 60
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 1966
+message-process 	avg: -88.92ms, max: 0, count: 180
+proposal (since-start)	count: 0
+request-queue   	avg: 4.60s, max: 4.66s
+slow-path       	ratio: 0.00
+
+-- Client 4
+current-episode 	value: 0
+current-protocol	value: sbft
+last-executed-sequence	num: 1966
+request-execute 	avg: 5.02s, max: 5.10s, count: 600
+request-interval	100.00us
+slow-path       	ratio: 0.00
+throughput      	200.00req/s
+
+-- Report #34 @ t=102.00s --
+-- Node 0
+block-execute   	avg: 203.50ms, max: 252.20ms, count: 60
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 2026
+message-process 	avg: -27.11ms, max: 149.74ms, count: 835
+proposal (since-start)	count: 2031
+request-queue   	avg: 4.69s, max: 4.72s
+slow-path       	ratio: 1.00
+
+-- Node 1
+block-execute   	avg: 0, max: 0, count: 0
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 373
+message-process 	avg: 0, max: 0, count: 0
+proposal (since-start)	count: 0
+request-queue   	avg: 0, max: 0
+slow-path       	ratio: NaN
+
+-- Node 2
+block-execute   	avg: 208.35ms, max: 289.00ms, count: 60
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 2026
+message-process 	avg: -76.78ms, max: 0, count: 179
+proposal (since-start)	count: 0
+request-queue   	avg: 4.61s, max: 4.67s
+slow-path       	ratio: 0.00
+
+-- Client 4
+current-episode 	value: 0
+current-protocol	value: sbft
+last-executed-sequence	num: 2026
+request-execute 	avg: 5.00s, max: 5.10s, count: 600
+request-interval	100.00us
+slow-path       	ratio: 0.00
+throughput      	200.00req/s
+
+-- Node 3
+block-execute   	avg: 207.94ms, max: 255.82ms, count: 60
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 2026
+message-process 	avg: -89.99ms, max: 0, count: 179
+proposal (since-start)	count: 0
+request-queue   	avg: 4.59s, max: 4.66s
+slow-path       	ratio: 0.00
+
+-- Report #35 @ t=105.00s --
+-- Node 0
+block-execute   	avg: 208.13ms, max: 300.74ms, count: 59
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 2086
+message-process 	avg: -31.22ms, max: 152.65ms, count: 841
+proposal (since-start)	count: 2090
+request-queue   	avg: 4.69s, max: 4.71s
+slow-path       	ratio: 1.00
+
+-- Node 1
+block-execute   	avg: 0, max: 0, count: 0
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 373
+message-process 	avg: 0, max: 0, count: 0
+proposal (since-start)	count: 0
+request-queue   	avg: 0, max: 0
+slow-path       	ratio: NaN
+
+-- Node 2
+block-execute   	avg: 211.44ms, max: 295.55ms, count: 59
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 2085
+message-process 	avg: -76.08ms, max: 0, count: 179
+proposal (since-start)	count: 0
+request-queue   	avg: 4.61s, max: 4.68s
+slow-path       	ratio: 0.00
+
+-- Client 4
+current-episode 	value: 0
+current-protocol	value: sbft
+last-executed-sequence	num: 2085
+request-execute 	avg: 5.00s, max: 5.10s, count: 590
+request-interval	100.00us
+slow-path       	ratio: 0.00
+throughput      	196.67req/s
+
+-- Node 3
+block-execute   	avg: 210.68ms, max: 288.07ms, count: 59
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 2085
+message-process 	avg: -89.46ms, max: 0, count: 179
+proposal (since-start)	count: 0
+request-queue   	avg: 4.59s, max: 4.65s
+slow-path       	ratio: 0.00
+
+-- Report #36 @ t=108.00s --
+-- Node 0
+block-execute   	avg: 212.94ms, max: 304.30ms, count: 60
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 2145
+message-process 	avg: -28.45ms, max: 150.23ms, count: 837
+proposal (since-start)	count: 2150
+request-queue   	avg: 4.68s, max: 4.75s
+slow-path       	ratio: 1.00
+
+-- Node 2
+block-execute   	avg: 215.13ms, max: 285.09ms, count: 60
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 2145
+message-process 	avg: -78.86ms, max: 0, count: 179
+proposal (since-start)	count: 0
+request-queue   	avg: 4.60s, max: 4.66s
+slow-path       	ratio: 0.00
+
+-- Node 1
+block-execute   	avg: 0, max: 0, count: 0
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 373
+message-process 	avg: 0, max: 0, count: 0
+proposal (since-start)	count: 0
+request-queue   	avg: 0, max: 0
+slow-path       	ratio: NaN
+
+-- Node 3
+block-execute   	avg: 214.93ms, max: 285.63ms, count: 60
+current-episode 	value: 0
+current-protocol	value: sbft
+in-dark			value: true
+last-executed-sequence	num: 2145
+message-process 	avg: -91.03ms, max: 0, count: 179
+proposal (since-start)	count: 0
+request-queue   	avg: 4.59s, max: 4.65s
+slow-path       	ratio: 0.00
+
+-- Client 4
+current-episode 	value: 0
+current-protocol	value: sbft
+last-executed-sequence	num: 2145
+request-execute 	avg: 5.01s, max: 5.11s, count: 600
+request-interval	100.00us
+slow-path       	ratio: 0.00
+throughput      	200.00req/s
+
