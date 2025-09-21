@@ -43,11 +43,30 @@ def parse_benchmark_file(file_path):
         logging.info(f"  Client section found.")
         
         throughput_match = re.search(r'throughput\s+([\d.]+)req/s', client_section)
-        req_exec_match = re.search(r'request-execute\s+avg:\s+([\d.]+)(?:s)?,\s+max:\s+([\d.]+)(?:s)?', client_section)
+        req_exec_match = re.search(r'request-execute\s+avg:\s+([\d.]+)(\w+)?,?\s+max:\s+([\d.]+)(\w+)?', client_section)
 
         throughput = float(throughput_match.group(1)) if throughput_match else 0.0
-        latency_avg = float(req_exec_match.group(1)) if req_exec_match else 0.0
-        latency_max = float(req_exec_match.group(2)) if req_exec_match else 0.0
+        
+        latency_avg = 0.0
+        latency_max = 0.0
+        if req_exec_match:
+            avg_val = float(req_exec_match.group(1))
+            avg_unit = req_exec_match.group(2)
+            if avg_unit == 'ms':
+                latency_avg = avg_val / 1000
+            elif avg_unit == 'us':
+                latency_avg = avg_val / 1000000
+            else: # s or no unit
+                latency_avg = avg_val
+
+            max_val = float(req_exec_match.group(3))
+            max_unit = req_exec_match.group(4)
+            if max_unit == 'ms':
+                latency_max = max_val / 1000
+            elif max_unit == 'us':
+                latency_max = max_val / 1000000
+            else: # s or no unit
+                latency_max = max_val
         
         logging.info(f"  Throughput: {throughput}, Latency Avg: {latency_avg}, Latency Max: {latency_max}")
 
