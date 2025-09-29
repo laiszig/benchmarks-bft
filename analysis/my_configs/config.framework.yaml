@@ -1,0 +1,172 @@
+# This is the main configuration file for the BFT framework.
+# It defines the network topology, general behavior, benchmark parameters,
+# workload characteristics, and fault injection settings.
+# A protocol-specific config (e.g., config.pbft.yaml) is OVERLAID on this one,
+# inheriting its values and overriding them where necessary.
+
+# Defines the network addresses for all nodes in the system.
+network:
+  # The address of the coordination server. This server is responsible for
+  # setting up the experiment, collecting results, and managing nodes.
+  server: 127.0.0.1:9020
+  # A list of all worker nodes (replicas and clients) participating in the consensus.
+  # The framework assigns IDs to these nodes starting from 0.
+  units:
+    - 127.0.0.1:9021 # Node 0
+    - 127.0.0.1:9022 # Node 1
+    - 127.0.0.1:9023 # Node 2
+    - 127.0.0.1:9024 # Node 3
+    - 127.0.0.1:9025 # ...and so on
+
+# General settings for the BFT protocol execution.
+general:
+  # The maximum number of faulty replicas the system can tolerate.
+  # This value 'f' is used in quorum calculations (e.g., "2f + 1").
+  # For a system with N replicas, N must be >= 3f + 1 for classic BFT.
+  f: 1
+  # The maximum number of requests that can be processed concurrently.
+  # This acts as a buffer or window size for in-flight requests.
+  max-active-requests: 1000
+  # Logging verbosity level. 'v' enables verbose logging.
+  verbosity: v
+  # Determines where logs are written.
+  # true: write to a log file. false: print to standard output (stdout).
+  logfile: true
+  # Enables or disables the BFTBrain learning agent for dynamic protocol switching.
+  learning: false
+  # The sequence number interval at which performance reports are generated.
+  report-sequence: 2500
+  # The sequence number interval at which nodes might exchange state information.
+  exchange-sequence: 3000
+
+# Parameters for controlling benchmark execution and measurements.
+benchmark:
+  # The number of client requests to bundle into a single block/batch.
+  block-size: 10
+  # The number of sequence numbers to process before creating a stable checkpoint.
+  checkpoint-size: 5000
+  # When catching up, a node will request `k` number of checkpoints from peers.
+  catch-up-k: 2
+  # For open-loop clients, this is the delay between sending requests, in microseconds.
+  request-interval-micros: 100
+  # The interval at which benchmark statistics are collected and reported, in milliseconds.
+  benchmark-interval-ms: 3000
+  # The timeout strategy. 'fixed' means a constant timeout value. Other values might be 'adaptive'.
+  timeout: fixed
+  # The base timeout value for state transitions, in milliseconds. Can be scaled by a multiplier in the protocol config.
+  timeout-trigger-interval-ms: 50
+  # The type of client workload generator. 'basic' is a simple, non-interactive client.
+  client: basic
+  # Settings for a closed-loop client, which waits for replies before sending new requests.
+  closed-loop:
+    # Enables or disables the closed-loop client model.
+    enable: true
+    # The number of concurrent clients in the closed-loop simulation.
+    num-client: 100
+    # An artificial "thinking time" delay added after receiving a reply before sending the next request, in milliseconds.
+    delay-ms: 0
+  # The number of sequence numbers between leader rotations (for protocols like HotStuff).
+  leader-rotate-interval: 100
+  # A delay to wait for message aggregation before processing, in milliseconds.
+  aggregation-delay-ms: 200
+
+# Defines the characteristics of the workload being processed by the BFT system.
+workload:
+  # Controls the level of data contention. A lower value means more contention
+  # (more requests targeting the same data items), following a Zipfian distribution.
+  contention-level: 100
+  # The total number of unique data items in the simulated dataset.
+  dataset-size: 100
+  # Defines the size of request and reply messages.
+  payload:
+    # The size of a client request payload in bytes.
+    request-size: 1000000
+    # The size of a server reply payload in bytes.
+    reply-size: 1000000
+  # An artificial compute factor to simulate processing time for each request.
+  compute-factor: 0
+  # Defines the distribution of requests across the dataset (e.g., uniform, skewed).
+  distribution:
+    - 1 # 00
+    - 0 # 04
+    - 0 # 40
+    - 0 # 44
+  # The ratio of read-only requests to read-write requests in the workload (0.0 to 1.0).
+  read-only-ratio: 0
+
+# Configuration for injecting various types of faults to test protocol resilience.
+fault:
+  # Simulates a "communication blackout" fault where nodes cannot hear from others.
+  in-dark:
+    # A list of node IDs that will be affected by this fault.
+    # These nodes will be excluded from leader rotation.
+    affected-entities:
+      - 1
+    # The fault generator's behavior.
+    generator:
+      # If true, the fault schedule advances through the 'values' list. If false, it stays on the first value.
+      advance: true
+      # The initial state of the fault (e.g., false = not in-dark).
+      init: false
+      # An initial delay before the fault schedule starts, in milliseconds.
+      delay: 10000
+      # A schedule of fault states and their durations.
+      schedule:
+        # The sequence of fault values (e.g., false, true, false).
+        values:
+          - false
+          - true
+        # The duration of each corresponding value in the schedule, in milliseconds.
+        intervals:
+          - 10000
+  # Simulates a timeout fault, where a node behaves as if a timeout occurred.
+  timeout:
+    # The list of node IDs that will experience the artificial timeout.
+    affected-entities:
+      - 2
+    generator:
+      advance: true
+      init: 0
+      delay: 10000
+      fixed:
+        value: 0
+  # Simulates a malicious leader that intentionally sends slow proposals.
+  slow-proposal:
+    # The list of node IDs that will act as malicious leaders.
+    affected-entities:
+      - 0
+    # Enables or disables this fault.
+    attacking: true
+    # The artificial delay added to proposals by the malicious leader, in milliseconds.
+    timer: 100
+
+# Settings related to dynamic protocol switching (a feature of BFTBrain).
+switching:
+  # A list of all BFT protocols available for the system to switch between.
+  # The StateMachine loads all of these on startup.
+  protocol-pool:
+    - pbft
+    - zyzzyva
+    - hotstuff
+    - cheapbft
+    - sbft
+    - prime
+  # A fixed sequence of protocols to switch between for debugging purposes.
+  # debug-sequence:
+  #   - cheapbft
+  #   - hotstuff
+  #   - prime
+  #   - zyzzyva
+  #   - pbft
+  #   - sbft
+
+# Settings for a demonstration UI.
+demo:
+  # Enables or disables the demo mode.
+  enabled: false
+  # The interval at which the demo UI is updated, in milliseconds.
+  update_interval_ms: 10000
+  # The IP address of the server that receives demo updates.
+  update_server: "127.0.0.1"
+  # The port of the server that receives demo updates.
+  update_port: 8999

@@ -1,0 +1,220 @@
+# This file defines the specific behavior of the PBFT protocol.
+# It works as an overlay on top of the base `config.framework.yaml`.
+# The StateMachine engine reads this file to construct and execute the protocol logic.
+
+# Defines plugins that modify the core behavior of the framework for this protocol.
+plugins:
+  # The role responsible for initiating certain plugin actions.
+  role: primary
+  # A list of message-related plugins to activate.
+  message:
+    - digest      # Adds a digest (hash) to messages.
+    - mac         # Adds a Message Authentication Code for integrity and authenticity.
+    - read-only   # Optimizations for read-only queries.
+    - checkpoint  # Enables checkpointing functionality.
+    - learning    # Enables the BFTBrain learning agent hooks.
+  # A list of transition-related plugins.
+  transition:
+    - checkpoint  # Enables state transitions related to checkpointing.
+  # The message processing pipeline model. 'direct' implies direct processing without complex queuing.
+  pipeline: direct
+
+# Defines the core state machine of the PBFT protocol.
+# This section is interpreted by `StateMachine.java`.
+protocol:
+  # General protocol-wide settings.
+  general:
+    # Leader election strategy. 'stable' means the leader does not change unless a fault occurs.
+    leader: stable
+    # The target for client requests. 'primary' means clients send requests directly to the leader.
+    request-target: primary
+
+  # The different roles a node can have in this protocol.
+  roles:
+    - primary   # The leader node.
+    - nodes     # The replica/follower nodes.
+    - client    # The client nodes that issue requests.
+
+  # The different high-level phases of the protocol.
+  phases:
+    # The 'normal' phase defines the main path of execution for reaching consensus.
+    - name: normal
+      # The states a node can be in during the normal phase.
+      # The StateMachine prefixes these with the protocol name (e.g., "pbft_idle")
+      # unless they are special states like "executed".
+      states:
+        - idle
+        - wait_prepare
+        - wait_commit
+        - executed
+      # The messages used in this phase.
+      messages:
+        - name: request
+          request-block: true # A boolean indicating this message contains a client request block.
+        - name: reply
+          request-block: true
+        - name: preprepare
+          request-block: true
+        - prepare
+        - commit
+        - report
+    # The 'view_change' phase is for electing a new leader if the current one is faulty.
+    - name: view_change
+      states:
+        - wait_view_change
+        - wait_new_view
+      messages:
+        - view_change
+        - new_view
+    # The 'checkpoint' phase is for creating a stable, agreed-upon snapshot of the state.
+    - name: checkpoint
+      messages:
+        - checkpoint
+        - fetch
+
+  # This is the core logic of the protocol, defining the state machine.
+  # It describes how a node transitions from one state to another.
+  transitions:
+    from:
+      # A transition rule for the CLIENT role.
+      - role: client
+        state: idle # When a client is in the 'idle' state...
+        to:
+          # ...it can transition to the 'executed' state.
+          - state: executed
+            # This transition updates the client's internal sequence number upon completion.
+            update: sequence
+            # The condition that triggers this transition.
+            condition:
+              type: message    # The trigger is receiving a message.
+              message: reply   # The specific message is a 'reply' from a replica.
+              # The StateMachine requires a quorum of matching messages.
+              # "2f + 1" is parsed by `parseQuorum` using the 'f' value from the general config.
+              quorum: 2f + 1
+
+      # A transition rule for the PRIMARY (leader) role.
+      - role: primary
+        state: idle # When the primary is 'idle'...
+        to:
+          # ...it transitions to 'wait_prepare'.
+          - state: wait_prepare
+            condition:
+              type: message    # Triggered by receiving a message.
+              message: request   # The message is a 'request' from a client.
+              quorum: 1        # Only one request is needed to start the protocol for a sequence.
+            # Actions to take upon a successful transition.
+            response:
+              # The primary sends a message.
+              - target: nodes      # The message is sent to all 'nodes' (replicas).
+                message: preprepare # The message is a 'preprepare'.
+            # This is a clever optimization in the StateMachine engine.
+            # It simulates the primary receiving its own 'prepare' message immediately,
+            # without actually sending it over the network. This simplifies the logic
+            # for the subsequent 'wait_prepare' -> 'wait_commit' transition.
+            extra_tally:
+              - role: primary
+                message: prepare
+
+      # A transition rule for the NODES (replicas) role.
+      - role: nodes
+        state: idle # When a replica is 'idle'...
+        to:
+          # ...it transitions to 'wait_prepare'.
+          - state: wait_prepare
+            condition:
+              type: message        # Triggered by receiving a message.
+              message: preprepare  # The message is a 'preprepare' from the primary.
+              quorum: 1            # Only one valid preprepare is needed.
+            response:
+              # In response, the replica multicasts a 'prepare' message to all other nodes.
+              - target: nodes
+                message: prepare
+            # Similar to the primary's rule, this replica uses 'extra_tally' to simulate
+            # receiving the primary's 'prepare' message. This is a logical shortcut.
+            extra_tally:
+              - role: primary
+                message: prepare
+
+      # Another transition rule for the NODES role.
+      - role: nodes
+        state: wait_prepare # When a replica is in 'wait_prepare'...
+        to:
+          # ...it can transition to 'wait_commit'.
+          - state: wait_commit
+            condition:
+              type: message    # Triggered by receiving messages.
+              message: prepare   # The message type is 'prepare'.
+              quorum: 2f + 1   # It must receive a quorum of 2f+1 matching PREPAREs.
+            response:
+              # In response, it multicasts a 'commit' message to all nodes.
+              - target: nodes
+                message: commit
+
+          # This is the trigger for a view change.
+          # If a node is stuck in 'wait_prepare' for too long (a timeout occurs)...
+          - state: wait_view_change
+            update: view # ...it would update its view number...
+            condition:
+              type: timeout
+              # The timeout is based on the sequence number not advancing.
+              mode: sequence
+            response:
+              # ...and it would start a view change by sending a 'view_change' message.
+              - target: nodes
+                message: view_change
+
+      # Another transition rule for the NODES role.
+      - role: nodes
+        state: wait_commit # When a replica is in 'wait_commit'...
+        to:
+          # ...it transitions to 'executed'.
+          - state: executed
+            # This transition finalizes and commits the sequence number.
+            update: sequence
+            condition:
+              type: message  # Triggered by receiving messages.
+              message: commit  # The message type is 'commit'.
+              quorum: 2f + 1 # It must receive a quorum of 2f+1 matching COMMITs.
+            response:
+              # Once executed, it sends a 'reply' to the original client.
+              - target: client
+                message: reply
+
+      # These are the transitions for the view-change sub-protocol.
+      - role: nodes
+        state: wait_view_change
+        to:
+          - state: wait_new_view
+            condition:
+              type: message
+              message: view_change
+              quorum: 2f + 1
+
+      - role: primary
+        state: wait_new_view
+        to:
+          - state: executed
+            update: sequence
+            response:
+              - target: nodes
+                message: new_view
+              - target: client
+                message: reply
+
+      - role: nodes
+        state: wait_new_view
+        to:
+          - state: executed
+            update: sequence
+            condition:
+              type: message
+              message: new_view
+              quorum: 1
+            response:
+              - target: client
+                message: reply
+          - state: wait_view_change
+            update: view
+            condition:
+              type: timeout
+              mode: state

@@ -13,10 +13,10 @@ protocol:
     leader: rotate
     request-target: primary
 
-  roles:
-    - primary
-    - nodes
-    - client
+  roles: # papeis
+    - primary # leader
+    - nodes # nodes
+    - client # cliente 
 
   phases:
     - name: normal
@@ -26,7 +26,9 @@ protocol:
         - wait_commit_primary
         - wait_commit_all
         - wait_decide
-        - executed
+        - executed 
+        - wait_view_change_all
+        - wait_view_change_primary
       messages:
         - name: request
           request-block: true
@@ -34,15 +36,25 @@ protocol:
           request-block: true
         - name: prepare
           request-block: true
+        - name: new_view
+          request-block: false
         - commit
         - decide
-
+    - name: view_change
+      states:
+        - wait_view_change
+        - wait_new_view
+      messages:
+        - view_change
+        - new_view
+        - checkpoint
     - name: checkpoint
       messages:
         - checkpoint
 
   transitions:
     from:
+        # cliente passa de idle para executed se recebe uma mensagem de resposta de f+1
       - role: client
         state: idle
         to:
@@ -52,7 +64,7 @@ protocol:
               type: message
               message: reply
               quorum: f + 1
-
+        # lider passa de idle para wait_prepare se recebe uma mensagem de request de quorum 1 e envia aos nodes mensagem de prepare
       - role: primary
         state: idle
         to:
@@ -64,7 +76,7 @@ protocol:
             response:
               - target: nodes
                 message: prepare
-
+        # nodos passam de idle para wait_commit_all se recebem mensagem de prepare de quorum 1 e envia para o primary a mensagem de prepare
       - role: nodes
         state: idle
         to:
@@ -119,12 +131,69 @@ protocol:
       - role: nodes
         state: wait_decide
         to:
+          # - state: executed
+          #   update: sequence
+          #   condition:
+          #     type: message
+          #     message: decide
+          #     quorum: 1
+          #   response:
+          #     - target: client
+          #       message: reply
+          #view-change
+          - state: wait_view_change
+            update: view
+            condition:
+              type: message
+              mode: decide
+            response:
+              - target: nodes
+                message: view_change
+          # view-change for timeout
+          - state: wait_view_change
+            update: view
+            condition:
+              type: timeout
+              mode: sequence
+            response:
+              - target: nodes
+                message: view_change
+
+      # view-change
+      - role: nodes
+        state: wait_view_change
+        to:
+          - state: wait_new_view
+            condition:
+              type: message
+              message: view_change
+              quorum: 2f + 1
+
+      - role: primary
+        state: wait_new_view
+        to:
+          - state: executed
+            update: sequence
+            response:
+              - target: nodes
+                message: new_view
+              - target: client
+                message: reply
+
+      - role: nodes
+        state: wait_new_view
+        to:
           - state: executed
             update: sequence
             condition:
               type: message
-              message: decide
+              message: new_view
               quorum: 1
             response:
               - target: client
                 message: reply
+          - state: wait_new_view
+            update: view
+            condition:
+              type: timeout
+              mode: state
